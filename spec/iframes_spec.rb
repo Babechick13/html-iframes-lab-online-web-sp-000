@@ -12,7 +12,7 @@ RSpec.describe 'index.html' do
       expect(iframe.attributes["width"].value).to eq("100%"), "The width attribute should be set to '100%'"
     end
 
-   if it 'contains a "height" attribute set to "400px" ' do
+    it 'contains a "height" attribute set to "400px" ' do
       iframe = parsed_html.search('iframe')[0]
       expect(iframe.attributes["height"]).to_not be_nil, "No height attribute was found in the iframe"
       expect(iframe.attributes["height"].value).to eq("400px"), "The height attribute should be set to '400px'"
@@ -27,5 +27,4 @@ RSpec.describe 'index.html' do
   end
 
 
-end
 end
